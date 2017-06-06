@@ -1,0 +1,1 @@
+cmd_/home/rpi/development/Treiber/modul/MPMGG_Controller_GP.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/rpi/development/Treiber/modul/MPMGG_Controller_GP.ko /home/rpi/development/Treiber/modul/MPMGG_Controller_GP.o /home/rpi/development/Treiber/modul/MPMGG_Controller_GP.mod.o

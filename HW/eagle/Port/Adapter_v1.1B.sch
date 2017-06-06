@@ -512,13 +512,11 @@ straight</description>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
-<symbol name="+12V">
+<symbol name="+3V3">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-0.635" x2="0" y2="1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="1.27" x2="-1.27" y2="-0.635" width="0.254" layer="94"/>
 <text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+12V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -548,10 +546,10 @@ straight</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="+12V" prefix="P+">
+<deviceset name="+3V3" prefix="+3V3">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="1" symbol="+12V" x="0" y="0"/>
+<gate name="G$1" symbol="+3V3" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -797,10 +795,6 @@ Source: DCJ0303.pdf</description>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="P+1" library="supply1" deviceset="+5V" device=""/>
-<part name="P+2" library="supply1" deviceset="+5V" device=""/>
-<part name="P+3" library="supply1" deviceset="+5V" device=""/>
-<part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="X6" library="con-molex" deviceset="22-23-2021" device=""/>
@@ -808,10 +802,15 @@ Source: DCJ0303.pdf</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="JP1" library="jumper" deviceset="JP1E" device=""/>
 <part name="X7" library="con-molex" deviceset="22-23-2021" device=""/>
-<part name="P+7" library="supply1" deviceset="+12V" device=""/>
 <part name="J1" library="con-jack" deviceset="DCJ0303" device=""/>
-<part name="P+8" library="supply1" deviceset="+12V" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="P+7" library="supply1" deviceset="+5V" device=""/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -902,23 +901,24 @@ Source: DCJ0303.pdf</description>
 <instance part="GND2" gate="1" x="111.76" y="66.04"/>
 <instance part="GND3" gate="1" x="111.76" y="35.56"/>
 <instance part="GND4" gate="1" x="111.76" y="5.08"/>
-<instance part="P+1" gate="1" x="81.28" y="99.06" rot="R90"/>
-<instance part="P+2" gate="1" x="81.28" y="68.58" rot="R90"/>
-<instance part="P+3" gate="1" x="81.28" y="7.62" rot="R90"/>
-<instance part="P+4" gate="1" x="81.28" y="38.1" rot="R90"/>
 <instance part="GND5" gate="1" x="60.96" y="43.18"/>
 <instance part="P+5" gate="1" x="55.88" y="91.44" rot="R180"/>
 <instance part="X6" gate="-1" x="63.5" y="119.38"/>
 <instance part="X6" gate="-2" x="63.5" y="116.84"/>
-<instance part="P+6" gate="1" x="58.42" y="114.3" rot="R180"/>
+<instance part="P+6" gate="1" x="38.1" y="114.3" rot="R180"/>
 <instance part="GND6" gate="1" x="53.34" y="114.3"/>
 <instance part="JP1" gate="A" x="58.42" y="101.6" rot="R270"/>
 <instance part="X7" gate="-1" x="43.18" y="119.38"/>
 <instance part="X7" gate="-2" x="43.18" y="116.84"/>
-<instance part="P+7" gate="1" x="35.56" y="116.84" rot="R90"/>
 <instance part="J1" gate="G$1" x="22.86" y="116.84" rot="R180"/>
-<instance part="P+8" gate="1" x="10.16" y="114.3" rot="R90"/>
 <instance part="GND8" gate="1" x="2.54" y="111.76"/>
+<instance part="+3V1" gate="G$1" x="58.42" y="114.3" rot="R180"/>
+<instance part="+3V2" gate="G$1" x="7.62" y="106.68" rot="R90"/>
+<instance part="P+7" gate="1" x="10.16" y="111.76" rot="R180"/>
+<instance part="+3V3" gate="G$1" x="76.2" y="99.06" rot="R90"/>
+<instance part="+3V4" gate="G$1" x="76.2" y="68.58" rot="R90"/>
+<instance part="+3V5" gate="G$1" x="76.2" y="7.62" rot="R90"/>
+<instance part="+3V6" gate="G$1" x="76.2" y="38.1" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1090,34 +1090,26 @@ Source: DCJ0303.pdf</description>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="X2" gate="-9" pin="S"/>
-<wire x1="86.36" y1="99.06" x2="83.82" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="X3" gate="-9" pin="S"/>
-<wire x1="86.36" y1="68.58" x2="83.82" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="P+2" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="X5" gate="-9" pin="S"/>
-<wire x1="86.36" y1="7.62" x2="83.82" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="P+3" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="X4" gate="-9" pin="S"/>
-<pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="83.82" y1="38.1" x2="86.36" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+6" gate="1" pin="+5V"/>
-<pinref part="X6" gate="-2" pin="S"/>
-<wire x1="58.42" y1="116.84" x2="60.96" y2="116.84" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="JP1" gate="A" pin="2"/>
 <wire x1="55.88" y1="99.06" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
+<pinref part="X1" gate="-2" pin="S"/>
+<pinref part="X1" gate="-4" pin="S"/>
+<wire x1="40.64" y1="99.06" x2="40.64" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="40.64" y1="101.6" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="101.6" x2="55.88" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="101.6" x2="55.88" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+7" gate="1" pin="+5V"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="10.16" y1="114.3" x2="15.24" y2="114.3" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+6" gate="1" pin="+5V"/>
+<pinref part="X7" gate="-2" pin="S"/>
+<wire x1="38.1" y1="116.84" x2="40.64" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I2C-CLK" class="0">
@@ -1147,26 +1139,38 @@ Source: DCJ0303.pdf</description>
 <label x="83.82" y="12.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="+3V3" class="0">
 <segment>
-<pinref part="X1" gate="-2" pin="S"/>
-<pinref part="X1" gate="-4" pin="S"/>
-<wire x1="40.64" y1="99.06" x2="40.64" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="40.64" y1="101.6" x2="40.64" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="101.6" x2="55.88" y2="101.6" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="+12V" class="0">
-<segment>
-<pinref part="P+7" gate="1" pin="+12V"/>
-<pinref part="X7" gate="-2" pin="S"/>
-<wire x1="38.1" y1="116.84" x2="40.64" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<wire x1="10.16" y1="106.68" x2="15.24" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="106.68" x2="15.24" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-1" pin="S"/>
+<wire x1="15.24" y1="104.14" x2="17.78" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="P+8" gate="1" pin="+12V"/>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="12.7" y1="114.3" x2="15.24" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<pinref part="X6" gate="-2" pin="S"/>
+<wire x1="58.42" y1="116.84" x2="60.96" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<pinref part="X2" gate="-9" pin="S"/>
+<wire x1="78.74" y1="99.06" x2="86.36" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
+<pinref part="X3" gate="-9" pin="S"/>
+<wire x1="78.74" y1="68.58" x2="86.36" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+<pinref part="X4" gate="-9" pin="S"/>
+<wire x1="78.74" y1="38.1" x2="86.36" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V5" gate="G$1" pin="+3V3"/>
+<pinref part="X5" gate="-9" pin="S"/>
+<wire x1="78.74" y1="7.62" x2="86.36" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

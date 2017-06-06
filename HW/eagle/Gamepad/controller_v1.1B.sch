@@ -2852,23 +2852,23 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <packages>
 </packages>
 <symbols>
-<symbol name="+5V">
-<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
-<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="+5V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
+<symbol name="+3V3">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="+3V3" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="+5V" prefix="P+">
+<deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="1" symbol="+5V" x="0" y="0"/>
+<gate name="1" symbol="GND" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -2878,10 +2878,10 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 </device>
 </devices>
 </deviceset>
-<deviceset name="GND" prefix="GND">
+<deviceset name="+3V3" prefix="+3V3">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
-<gate name="1" symbol="GND" x="0" y="0"/>
+<gate name="G$1" symbol="+3V3" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -3030,13 +3030,9 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <part name="R2" library="eagle-ltspice" deviceset="R" device="0207/10" value="10K"/>
 <part name="R3" library="eagle-ltspice" deviceset="R" device="0207/10" value="10k"/>
 <part name="R4" library="eagle-ltspice" deviceset="R" device="0207/10" value="10K"/>
-<part name="P+1" library="supply1" deviceset="+5V" device=""/>
-<part name="P+2" library="supply1" deviceset="+5V" device=""/>
-<part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="display" deviceset="ST7735_128X160" device=""/>
@@ -3052,6 +3048,10 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <part name="U$11" library="switch" deviceset="T_SW_RUBBER" device="2PIN"/>
 <part name="U$12" library="switch" deviceset="T_SW_RUBBER" device="2PIN"/>
 <part name="U$13" library="switch" deviceset="T_SW_RUBBER" device="2PIN"/>
+<part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3077,13 +3077,9 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <instance part="R2" gate="G$1" x="-25.4" y="-22.86" rot="R270"/>
 <instance part="R3" gate="G$1" x="-17.78" y="-22.86" rot="R270"/>
 <instance part="R4" gate="G$1" x="-10.16" y="-22.86" rot="R270"/>
-<instance part="P+1" gate="1" x="-20.32" y="-53.34" rot="R90"/>
-<instance part="P+2" gate="1" x="-22.86" y="20.32" rot="R90"/>
-<instance part="P+4" gate="1" x="-2.54" y="40.64" rot="R270"/>
 <instance part="GND1" gate="1" x="60.96" y="-66.04"/>
 <instance part="GND2" gate="1" x="-30.48" y="-66.04"/>
 <instance part="GND3" gate="1" x="27.94" y="35.56"/>
-<instance part="P+5" gate="1" x="15.24" y="38.1" rot="R90"/>
 <instance part="GND4" gate="1" x="-12.7" y="38.1"/>
 <instance part="GND5" gate="1" x="27.94" y="-66.04"/>
 <instance part="U$1" gate="G$1" x="20.32" y="63.5" rot="R180"/>
@@ -3099,6 +3095,10 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <instance part="U$11" gate="G$1" x="53.34" y="-38.1"/>
 <instance part="U$12" gate="G$1" x="53.34" y="-48.26"/>
 <instance part="U$13" gate="G$1" x="53.34" y="-58.42"/>
+<instance part="+3V1" gate="G$1" x="-2.54" y="40.64" rot="R270"/>
+<instance part="+3V2" gate="G$1" x="-22.86" y="20.32" rot="R90"/>
+<instance part="+3V3" gate="G$1" x="15.24" y="38.1" rot="R90"/>
+<instance part="+3V4" gate="G$1" x="-20.32" y="-53.34" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3301,31 +3301,6 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <wire x1="25.4" y1="-58.42" x2="27.94" y2="-58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+5V" class="0">
-<segment>
-<pinref part="RENC1" gate="A" pin="C"/>
-<wire x1="-10.16" y1="-53.34" x2="-17.78" y2="-53.34" width="0.1524" layer="91"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="P+2" gate="1" pin="+5V"/>
-<pinref part="IC1" gate="G$1" pin="VDD"/>
-<wire x1="-20.32" y1="20.32" x2="7.62" y2="20.32" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="25.4" y1="50.8" x2="25.4" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="38.1" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="P+5" gate="1" pin="+5V"/>
-<pinref part="U$1" gate="G$1" pin="+5V"/>
-</segment>
-<segment>
-<pinref part="WIRE" gate="-2" pin="S"/>
-<pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="-17.78" y1="43.18" x2="-7.62" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="43.18" x2="-7.62" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="40.64" x2="-5.08" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="I2C_CLK" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="SCL"/>
@@ -3487,6 +3462,31 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <pinref part="RENC1" gate="A" pin="1"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="0" y1="-58.42" x2="2.54" y2="-58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="WIRE" gate="-2" pin="S"/>
+<wire x1="-17.78" y1="43.18" x2="-7.62" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="43.18" x2="-7.62" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="40.64" x2="-5.08" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VDD"/>
+<wire x1="-20.32" y1="20.32" x2="7.62" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<wire x1="25.4" y1="50.8" x2="25.4" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="38.1" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="+5V"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="RENC1" gate="A" pin="C"/>
+<wire x1="-10.16" y1="-53.34" x2="-17.78" y2="-53.34" width="0.1524" layer="91"/>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 </nets>

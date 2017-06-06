@@ -353,8 +353,8 @@ UsedLibrary="C:/EAGLE-7.2.0/lbr/aliexpress/display.lbr"
 [Win_1]
 Type="Schematic Editor"
 Loc="651 318 1250 717"
-State=0
-Number=2
+State=2
+Number=1
 File="Adapter_v1.1B.sch"
 View="-3.13899 -0.486831 129.27 126.09"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
@@ -399,8 +399,8 @@ Sheet="1"
 
 [Win_2]
 Type="Control Panel"
-Loc="-21 266 578 665"
-State=2
+Loc="0 266 599 665"
+State=1
 Number=0
 
 [Desktop]

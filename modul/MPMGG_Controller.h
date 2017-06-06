@@ -1,15 +1,9 @@
+#include "mcp23017.h"
+#include "mcp23017.h"
+
 #define MAX_PADS						0x04
 
-/******************************
- *       MCP23017 Def's       *
- ******************************/
-#define MPC23017_GPIOA_MODE				0x00
-#define MPC23017_GPIOB_MODE				0x01
-#define MPC23017_GPIOA_PULLUPS_MODE		0x0c
-#define MPC23017_GPIOB_PULLUPS_MODE		0x0d
-#define MPC23017_GPIOA_READ				0x12
-#define MPC23017_GPIOB_READ				0x13
-#define MPC23017_BASEADDR				0x20
+
 
 
 
